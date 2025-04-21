@@ -150,23 +150,24 @@
         <div class="content has-text-justified">
           <p>
             Humans naturally share information with those they are connected to, and video has become one of the
-dominant mediums for communication and expression on the Internet. To support high-quality, large-scale
-video content, modern video creation pipeline requires a comprehensive understanding of both the raw input
-materials (e.g., unedited footage captured by cameras) and the editing components (e.g., visual effects).
-In video editing scenarios, models must process multiple modalities (e.g., vision, audio, text) with strong
-background knowledge and handle flexible input lengths (e.g., hour-long raw videos), which poses significant
-challenge for traditional architectures. In this report, we introduce Vidi, a family of Large Multimodal
-Models (LMMs) for a wide range of video editing scenarios. The first release focuses on temporal retrieval,
-i.e., identifying the time ranges in input videos corresponding to a given text query. The model is capable
-of processing hour-long videos with strong temporal understanding capability, e.g., retrieve time ranges for
-certain queries. To support a comprehensive evaluation in real-world scenarios, we also present the VUE-TR
-benchmark, which introduces five key advancements: 1) Video duration: spans from 20 seconds to over an
-hour, which is significantly longer than existing temporal/moment retrieval datasets. 2) Audio support:
-includes audio-based queries for temporal retrieval. 3) Query format: accommodates three different query
-lengths/formats, i.e., keyword, phrase, and sentence. 4) Annotation quality: all ground-truth time ranges
-are manually annotated for high accuracy. 5) Evaluation metric: a refined IoU metric designed to support
-evaluation over multiple time ranges. Remarkably, Vidi significantly outperforms leading proprietary models,
-e.g., GPT-4o and Gemini, on temporal retrieval tasks, indicating its superiority in video editing scenarios.
+dominant mediums for communication and expression on the Internet. To support the creation of high-
+quality large-scale video content, a modern pipeline requires a comprehensive understanding of both the
+raw input materials (e.g., the unedited footage captured by cameras) and the editing components (e.g.,
+visual effects). In video editing scenarios, models must process multiple modalities (e.g., vision, audio, text)
+with strong background knowledge and handle flexible input lengths (e.g., hour-long raw videos), which
+poses significant challenges for traditional models. In this report, we introduce Vidi, a family of Large
+Multimodal Models (LMMs) for a wide range of video understand editing scenarios. The first release focuses
+on temporal retrieval, i.e., identifying the time ranges within the input videos corresponding to a given text
+query, which plays a critical role in intelligent editing. The model is capable of processing hour-long videos
+with strong temporal understanding capability, e.g., retrieve time ranges for certain queries. To support a
+comprehensive evaluation in real-world scenarios, we also present the VUE-TR benchmark, which introduces
+five key advancements: 1) Video duration: spans from 20 seconds to over an hour, which is significantly
+longer than existing temporal/moment retrieval datasets. 2) Audio support: includes audio-based queries
+for temporal retrieval. 3) Query format: accommodates three different query lengths/formats, i.e., keyword,
+phrase, and sentence. 4) Annotation quality: all ground-truth time ranges are manually annotated with
+high accuracy. 5) Evaluation metric: a refined IoU metric designed to support evaluation over multiple time
+ranges. Remarkably, Vidi significantly outperforms leading proprietary models, e.g., GPT-4o and Gemini,
+on the temporal retrieval task, indicating its superiority in video editing scenarios.
           </p>
         </div>
       </div>
@@ -180,7 +181,18 @@ e.g., GPT-4o and Gemini, on temporal retrieval tasks, indicating its superiority
   <div class="container is-max-desktop content">
     <h2 class="title">Benchmark</h2>
     <img src="static/images/data_table.png" width="1200" height="213">
-    <img src="static/images/data_figure.png" width="973" height="405">
+    <h2 class="subtitle has-text-centered">
+      Duration distribution of videos in the proposed VUE-TR evaluation benchmark. The
+dataset covers a wide range of video lengths, from ultra-short clips (< 1 minute) to ultra-long
+videos (> 1 hour), enabling comprehensive evaluation of temporal retrieval models across diverse
+real-world scenarios.
+    </h2>
+    <img src="static/images/data_figure.png" width="778" height="324">
+    <h2 class="subtitle has-text-centered">
+      The distribution of query modality and format in the VUE-TR benchmark. This diverse
+distribution reflects real-world retrieval scenarios and enables fine-grained analysis of model perfor-
+mance across input types.
+    </h2>
   </div>
 </section>
 <!--End Benchmark -->
@@ -191,7 +203,7 @@ e.g., GPT-4o and Gemini, on temporal retrieval tasks, indicating its superiority
     <!-- <td>Video Id</td> -->
   <table class="styled-table"><tr><td>Input Video</td><td>Input Query</td><td>Duration</td><td>Ground Truth</td><td>Prediction</td><td>IOU</td><td>Result Clips</td></tr>
     <tr>
-      <td><iframe width="200" src="https://www.youtube.com/embed/JtoXTI2uouA?si=Cl15eBvgZhFC-xOb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+      <td><iframe width="200" height="300" src="https://www.youtube.com/embed/JtoXTI2uouA?si=Cl15eBvgZhFC-xOb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
       <td>basketball statue</td><td>00:00:46</td><td>00:00:13-00:00:30</td><td>00:00:13-00:00:31</td><td>0.94</td>
       <td><iframe src="static/videos/JtoXTI2uouA_13_30_256.mp4" width="200" height="300"></iframe></td>
     </tr>
