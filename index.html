@@ -5,26 +5,26 @@
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
   <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="Vidi: Large Multimodal Models for Video Understanding and Editing"/>
-  <meta property="og:description" content="Next-generation Intelligent Video Creation Tools"/>
+  <meta property="og:title" content="Vidi2: Large Multimodal Models for Video Understanding and Creation"/>
+  <meta property="og:description" content="Toward Next-generation Intelligent Video Creation"/>
   <meta property="og:url" content="https://bytedance.github.io/vidi-website/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/teaser.png" />
+  <meta property="og:image" content="static/image/teaser_2.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="530"/>
 
 
-  <meta name="twitter:title" content="Vidi: Large Multimodal Models for Video Understanding and Editing">
-  <meta name="twitter:description" content="Next-generation Intelligent Video Creation Tools">
+  <meta name="twitter:title" content="Vidi2: Large Multimodal Models for Video Understanding and Creation">
+  <meta name="twitter:description" content="Toward Next-generation Intelligent Video Creation">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/image/teaser.png">
+  <meta name="twitter:image" content="static/image/teaser_2.png">
   <meta name="twitter:card" content="summary_large_image">
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Vidi: Large Multimodal Models for Video Understanding and Editing</title>
+  <title>Vidi2: Large Multimodal Models for Video Understanding and Creation</title>
   <link rel="icon" type="image/x-icon" href="static/images/logo_search.png">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -55,7 +55,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Vidi: Large Multimodal Models for Video Understanding and Editing</h1>
+            <h1 class="title is-1 publication-title">Vidi2: Large Multimodal Models for Video Understanding and Creation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -86,6 +86,16 @@
                       </a>
                     </span>
 
+                    <span class="link-block">
+                      <a href="https://arxiv.org/pdf/2504.15681" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Previous Version</span>
+                    </a>
+                  </span>
+
                     <!-- Supplementary PDF link -->
 <!--                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
@@ -115,7 +125,7 @@
                   <span class="icon">
                     <i class="fas fa-search"></i>
                   </span>
-                  <span>Demo</span>
+                  <span>Demo Coming Very Soon</span>
                 </a>
               </span>
             </div>
@@ -135,9 +145,9 @@
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video> -->
-      <img src="static/images/teaser_1_5.png" width="1200" height="530" class="center">
+      <img src="static/images/teaser_2.png" width="1200" height="530" class="center">
       <h2 class="subtitle has-text-centered">
-        Temporal retrieval performance of different models on the proposed VUE-TR benchmark.
+        Spatio-temporal grounding and temporal retrieval accuracy on the proposed benchmarks.
       </h2>
     </div>
   </div>
@@ -152,25 +162,25 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Humans naturally share information with those they are connected to, and video has become one of the 
-            dominant mediums for communication and expression on the Internet. To support the creation of high-quality 
-            large-scale video content, a modern pipeline requires a comprehensive understanding of both the 
-            raw input materials (e.g., the unedited footage captured by cameras) and the editing components (e.g., 
-            visual effects). In video editing scenarios, models must process multiple modalities (e.g., vision, audio, text) 
-            with strong background knowledge and handle flexible input lengths (e.g., hour-long raw videos), which 
-            poses significant challenges for traditional models. In this report, we introduce Vidi, a family of Large 
-            Multimodal Models (LMMs) for a wide range of video understand editing scenarios. The first release focuses 
-            on temporal retrieval, i.e., identifying the time ranges within the input videos corresponding to a given text 
-            query, which plays a critical role in intelligent editing. The model is capable of processing hour-long videos 
-            with strong temporal understanding capability, e.g., retrieve time ranges for certain queries. To support a 
-            comprehensive evaluation in real-world scenarios, we also present the VUE-TR benchmark, which introduces 
-            five key advancements: 1) Video duration: spans from 20 seconds to over an hour, which is significantly 
-            longer than existing temporal/moment retrieval datasets. 2) Audio support: includes audio-based queries 
-            for temporal retrieval. 3) Query format: accommodates three different query lengths/formats, i.e., keyword, 
-            phrase, and sentence. 4) Annotation quality: all ground-truth time ranges are manually annotated with 
-            high accuracy. 5) Evaluation metric: a refined IoU metric designed to support evaluation over multiple time 
-            ranges. Remarkably, Vidi significantly outperforms leading proprietary models, e.g., GPT-4o and Gemini, 
-            on the temporal retrieval task, indicating its superiority in video editing scenarios.
+            Video has emerged as the primary medium for communication and creativity on the Internet, driving strong
+            demand for scalable, high-quality video production. Vidi models continue to evolve toward next-generation
+            video creation and have achieved state-of-the-art performance in multimodal temporal retrieval (TR). In its
+            second release, Vidi2 advances video understanding with fine-grained spatio-temporal grounding (STG) and
+            extends its capability to video question answering (Video QA), enabling comprehensive multimodal reason-
+            ing. Given a text query, Vidi2 can identify not only the corresponding timestamps but also the bounding boxes
+            of target objects within the output time ranges. This end-to-end spatio-temporal grounding capability en-
+            ables potential applications in complex editing scenarios, such as plot or character understanding, automatic
+            multi-view switching, and intelligent, composition-aware reframing and cropping. To enable comprehensive
+            evaluation of STG in practical settings, we introduce a new benchmark, VUE-STG, which offers four key
+            improvements over existing STG datasets: 1) Video duration: spans from roughly 10s to 30 mins, enabling
+            long-context reasoning; 2) Query format: queries are mostly converted into noun phrases while preserving
+            sentence-level expressiveness; 3) Annotation quality: all ground-truth time ranges and bounding boxes
+            are manually annotated with high accuracy; 4) Evaluation metric: a refined vIoU/tIoU/vIoU-Intersection
+            scheme for multi-segment spatio-temporal evaluation. In addition, we upgrade the previous VUE-TR bench-
+            mark to VUE-TR-V2, achieving a more balanced video-length distribution and more user-style queries.
+            Remarkably, the Vidi2 model substantially outperforms leading proprietary systems, such as Gemini 3 Pro
+            (Preview) and GPT-5, on both VUE-TR-V2 and VUE-STG, while achieving competitive results with popular
+            open-source models with similar scale on video QA benchmarks.
           </p>
         </div>
       </div>
@@ -252,9 +262,9 @@
       </tr>
 
       <tr>
-        <td><iframe width="300" src="https://www.youtube.com/embed/wC6OphnN-I0?si=HScBW2RURPnNMu0g" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+        <td><iframe width="300" height="300" src="https://www.youtube.com/embed/wC6OphnN-I0?si=HScBW2RURPnNMu0g" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
         <td>The glowing blue water beads in which the mango seed is placed, with its germination into a root and shoot visualized through a time-lapse sequence against a dark background</td><td>00:15:50</td>
-        <td><iframe src="static/videos/wC6OphnN-I0_0409_h264.mp4" width="300" ></iframe></td>
+        <td><iframe src="static/videos/wC6OphnN-I0_0409_h264.mp4" width="300" height="300" ></iframe></td>
       </tr>
 
     </table>
@@ -364,6 +374,19 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
+        @article{Vidi2025vidi2,
+          title={Vidi2: Large Multimodal Models for Video 
+                  Understanding and Creation},
+          author={Vidi Team, Celong Liu, Chia-Wen Kuo, Chuang Huang, 
+                  Dawei Du, Fan Chen, Guang Chen, Haoji Zhang, 
+                  Haojun Zhao, Lingxi Zhang, Lu Guo, Lusha Li, 
+                  Longyin Wen, Qihang Fan, Qingyu Chen, Rachel Deng,
+                  Sijie Zhu, Stuart Siew, Tong Jin, Weiyan Tao,
+                  Wen Zhong, Xiaohui Shen, Xin Gu, Zhenfang Chen, Zuhua Lin},
+          journal={arXiv preprint arXiv:},
+          year={2025}
+        }
+
         @article{Vidi2025vidi,
           title={Vidi: Large Multimodal Models for Video 
                   Understanding and Editing},
