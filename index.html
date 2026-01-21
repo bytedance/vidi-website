@@ -55,7 +55,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Vidi2: Large Multimodal Models for Video Understanding and Creation</h1>
+            <h1 class="title is-1 publication-title">Vidi2.5: Large Multimodal Models for Video Understanding and Creation</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -114,7 +114,7 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Code (Updating Very Soon)</span>
                   </a>
                 </span>
 
@@ -125,7 +125,7 @@
                   <span class="icon">
                     <i class="fas fa-search"></i>
                   </span>
-                  <span>Demo</span>
+                  <span>Demo (Updating Very Soon)</span>
                 </a>
               </span>
             </div>
@@ -145,7 +145,7 @@
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video> -->
-      <img src="static/images/teaser_2.png" width="1200" height="530" class="center">
+      <img src="static/images/teaser2_5.png" width="1200" height="530" class="center">
       <h2 class="subtitle has-text-centered">
         Spatio-temporal grounding and temporal retrieval accuracy on the proposed benchmarks.
       </h2>
@@ -162,25 +162,29 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Video has emerged as the primary medium for communication and creativity on the Internet, driving strong
-            demand for scalable, high-quality video production. Vidi models continue to evolve toward next-generation
-            video creation and have achieved state-of-the-art performance in multimodal temporal retrieval (TR). In its
-            second release, Vidi2 advances video understanding with fine-grained spatio-temporal grounding (STG) and
-            extends its capability to video question answering (Video QA), enabling comprehensive multimodal reasoning. 
-            Given a text query, Vidi2 can identify not only the corresponding timestamps but also the bounding boxes
-            of target objects within the output time ranges. This end-to-end spatio-temporal grounding capability 
-            enables potential applications in complex editing scenarios, such as plot or character understanding, automatic
-            multi-view switching, and intelligent, composition-aware reframing and cropping. To enable comprehensive
-            evaluation of STG in practical settings, we introduce a new benchmark, VUE-STG, which offers four key
-            improvements over existing STG datasets: 1) Video duration: spans from roughly 10s to 30 mins, enabling
-            long-context reasoning; 2) Query format: queries are mostly converted into noun phrases while preserving
-            sentence-level expressiveness; 3) Annotation quality: all ground-truth time ranges and bounding boxes
-            are manually annotated with high accuracy; 4) Evaluation metric: a refined vIoU/tIoU/vIoU-Intersection
-            scheme for multi-segment spatio-temporal evaluation. In addition, we upgrade the previous VUE-TR 
-            benchmark to VUE-TR-V2, achieving a more balanced video-length distribution and more user-style queries.
-            Remarkably, the Vidi2 model substantially outperforms leading proprietary systems, such as Gemini 3 Pro
-            (Preview) and GPT-5, on both VUE-TR-V2 and VUE-STG, while achieving competitive results with popular
-            open-source models with similar scale on video QA benchmarks.
+            Video has emerged as the primary medium for communication and creativity on the Internet, driving strong 
+            demand for scalable, high-quality video production. Vidi models continue to evolve toward next-generation 
+            video creation and have achieved state-of-the-art performance in multimodal temporal retrieval (TR). In
+            its second release, Vidi2 advances video understanding with fine-grained spatio-temporal grounding (STG)
+            and extends its capability to video question answering (Video QA), enabling comprehensive multimodal
+            reasoning. Given a text query, Vidi2 can identify not only the corresponding timestamps but also the
+            bounding boxes of target objects within the output time ranges. This end-to-end spatio-temporal grounding
+            capability enables potential applications in complex editing scenarios, such as plot understanding, automatic
+            view switching, etc. To enable comprehensive evaluation of STG in practical settings, we introduce a new
+            benchmark, VUE-STG, which offers critical improvements over existing STG datasets in video duration,
+            query format, annotation quality, and evaluation metric. In addition, we upgrade the previous VUE-TR
+            benchmark to VUE-TR-V2, achieving a more balanced duration and query distribution. Remarkably, the
+            Vidi2 model substantially outperforms leading proprietary systems, such as Gemini 3 Pro Preview and GPT-5, 
+            on both VUE-TR-V2 and VUE-STG, while achieving competitive results with popular open-source models
+            with similar scale on video QA benchmarks. The latest Vidi2.5 offers significantly stronger STG capability
+            and slightly better TR and Video QA performance over Vidi2 by RL training. This update also introduces
+            a Vidi2.5-Think model to handle plot understanding with complex plot reasoning. To comprehensively
+            evaluate the performance of plot understanding, we propose a new benchmark named VUE-PLOT with
+            two tracks, Character and Reasoning. Notably, Vidi2.5-Think outperforms Gemini 3 Pro Preview on fine-grained 
+            character understanding with comparable performance on complex plot reasoning. Furthermore, we
+            demonstrate the effectiveness of Vidi2.5 on a challenging real-world application, video editing planning. The
+            post-trained variant Vidi-Edit can generate structured editing plans specifying narrative structure, audio
+            attributes, and visual editing intent, illustrating its strong potential for complex real-world tasks.
           </p>
         </div>
       </div>
@@ -387,15 +391,18 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-        @article{Vidi2025vidi2,
-          title={Vidi2: Large Multimodal Models for Video 
+        @article{Vidi2025vidi2.5,
+          title={Vidi2.5: Large Multimodal Models for Video 
                   Understanding and Creation},
-          author={Vidi Team, Celong Liu, Chia-Wen Kuo, Chuang Huang, 
-                  Dawei Du, Fan Chen, Guang Chen, Haoji Zhang, 
-                  Haojun Zhao, Lingxi Zhang, Lu Guo, Lusha Li, 
-                  Longyin Wen, Qihang Fan, Qingyu Chen, Rachel Deng,
-                  Sijie Zhu, Stuart Siew, Tong Jin, Weiyan Tao,
-                  Wen Zhong, Xiaohui Shen, Xin Gu, Zhenfang Chen, Zuhua Lin},
+          author={Vidi Team, Chia-Wen Kuo, Chuang Huang, Dawei Du, 
+                  Fan Chen, Fanding Lei, Feng Gao, Guang Chen, 
+                  Haoji Zhang, Haojun Zhao, Jin Liu, Jingjing Zhuge,
+                  Lili Fang, Lingxi Zhang, Longyin Wen, Lu Guo,
+                  Lu Xu, Lusha Li, Qihang Fan, Rachel Deng, 
+                  Shaobo Fang, Shu Zhang, Sijie Zhu, Stuart Siew, 
+                  Weiyan Tao, Wen Zhong, Xiaohui Shen, Xin Gu, 
+                  Ye Yuan, Yicheng He, Yiming Cui, Zhenfang Chen,
+                  Zhihua Wu, Zuhua Lin},
           journal={arXiv preprint arXiv:2511.19529},
           year={2025}
         }
